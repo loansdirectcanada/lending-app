@@ -4,7 +4,7 @@ const TwoBack = ({ setCurrent, formData }) => {
   return (
     <div className="container px-2 py-0 mx-auto flex p-0">
       <div className="  rounded-lg  flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 ">
-        <div className="flex space-x-4 justify-center">
+        <div className="flex space-x-4 justify-center m-5">
           <h1 className="up_front_heading_ctsm">
             <span className="text-indigo-300">{formData.your_industry} </span>{" "}
             ,works in Carpentry{" "}

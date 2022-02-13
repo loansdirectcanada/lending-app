@@ -53,7 +53,7 @@ export default function Home() {
       <section className="text-gray-600 body-font">
         <div className="css-container">
           {current === 1 && (
-            <div className="">
+            <div className="m-5">
               <h1 className="up_front_heading">
                 Fill one simple form with four sections to see your funding
                 options.
