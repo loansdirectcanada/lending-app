@@ -7,8 +7,12 @@ import db from "../firebase";
 import { v4 as uuidv4 } from "uuid";
 
 import { useState } from "react";
+import Oneback from "../components/back/one-back";
+import TwoBack from "../components/back/two-back";
+import ThreeBack from "../components/back/three-back";
 export default function Home() {
   const [current, setCurrent] = useState(1);
+  const [summery, setSummery] = useState(2);
   const [formData, setFormData] = useState({
     id: uuidv4(),
     money_need: "",
@@ -48,18 +52,26 @@ export default function Home() {
       <Navbar />
       <section className="text-gray-600 body-font">
         <div className="css-container">
-          {current !== 4 && (
-            <div className="sm:text-center">
-              <h1 className="title-font font-medium text-3xl text-white">
-                Slow-carb next level shoindcgoitch ethical authentic, poko
-                scenester
+          {current === 1 && (
+            <div className="">
+              <h1 className="up_front_heading">
+                Fill one simple form with four sections to see your funding
+                options.
               </h1>
-              <p className="leading-relaxed mt-4">
-                Poke slow-carb mixtape knausgaard, typewriter street art
-                gentrify hammock starladder roathse. Craies vegan tousled etsy
-                austin.
+              <p className="up_front_text">
+                This will not impact your credit score.
               </p>
             </div>
+          )}
+          {current === 2 && (
+            <Oneback setCurrent={setCurrent} formData={formData} />
+          )}
+
+          {current === 3 && (
+            <>
+              <Oneback setCurrent={setCurrent} formData={formData} />
+              <TwoBack setCurrent={setCurrent} formData={formData} />{" "}
+            </>
           )}
 
           {current === 1 ? (
