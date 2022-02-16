@@ -1,13 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #ec3b37;
+  font-family: 'Lato', sans-serif;
+  background-color: #f2f2f2;
 }
 
 a {
@@ -135,4 +135,65 @@ a {
   align-items: center;
   justify-content: center;
   margin-top: 13px;
+}
+.border-animation {
+  border: 1px solid #d4d6d5;
+  overflow: hidden;
+}
+
+.border-animation::before {
+  box-sizing: border-box;
+  transform: translateX(100%);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-radius: 4px;
+}
+.border-animation::after {
+  box-sizing: border-box;
+  transform: translateX(-100%);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.border-animation.is-focus:after {
+  transition: 0.1s transform linear 0.2s, 0.1s height linear 0.3s;
+  transform: translateX(0);
+  height: 100%;
+  border-color: #304ff8;
+}
+.border-animation.is-focus:before {
+  transition: 0.1s transform linear, 0.1s height linear 0.1s;
+  transform: translateX(0);
+  height: 100%;
+  border-color: #304ff8;
+}
+.border-animation.is-focus {
+  border: none;
+}
+.border-animation.is-focus .label-text{
+ top: 15px !important;
+ color: #304ff8;
+}
+
+.radiobtn .checkimage  {
+  display: none;
+}
+.radiobtn input:checked ~ .uncheckimage {
+  display: none;
+}
+.radiobtn input:checked ~ .checkimage {
+  display: block;
 }

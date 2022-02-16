@@ -51,14 +51,14 @@ export default function Home() {
     <>
       <Navbar />
       <section className="text-gray-600 body-font">
-        <div className="css-container">
+        <div className="max-w-[650px] mx-auto">
           {current === 1 && (
-            <div className="m-5">
-              <h1 className="up_front_heading">
+            <div className="mb-[60px]">
+              <h1 className="text-[32px] leading-[42px] font-lato capitalize text-[#2A2C2B] font-semibold mb-[10px]">
                 Fill one simple form with four sections to see your funding
                 options.
               </h1>
-              <p className="up_front_text">
+              <p className="text-[16px] leading-[24px] text-[#2A2C2B] font-lato font-normal">
                 This will not impact your credit score.
               </p>
             </div>
