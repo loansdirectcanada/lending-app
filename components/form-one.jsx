@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const formOne = ({ setCurrent, formData, setFormData }) => {
+const FormOne = ({ setCurrent, formData, setFormData }) => {
   const handleChanges = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -57,7 +57,7 @@ const formOne = ({ setCurrent, formData, setFormData }) => {
                 How long would you like the loan for?
               </h5>
               <p className="mb-[15px] text-[12px] font-medium text-[#2A2C2B] font-lato">
-                The shorter the term, the less interest you'll pay.
+                The shorter the term, the less interest you ll pay.
               </p>
               <div className="flex items-center">
                 <div
@@ -405,4 +405,4 @@ const formOne = ({ setCurrent, formData, setFormData }) => {
   );
 };
 
-export default formOne;
+export default FormOne;
