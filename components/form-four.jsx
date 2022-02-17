@@ -19,8 +19,8 @@ const formFour = ({ setCurrent, formData, setFormData }) => {
                 alt="hero"
                 src="https://www.pngplay.com/wp-content/uploads/12/Congratulations-Gifs-PNG-Free-File-Download.gif"
               />
-              <div className="text-center lg:w-2/3 w-full">
-                <h1 className="text-[50px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
+              <div className="text-center  w-full">
+                <h1 className="text-[24px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
                   Congratulations Your Submission is successful
                 </h1>
                 <p className="mb-[15px] text-[12px] font-medium text-[#2A2C2B] font-lato">

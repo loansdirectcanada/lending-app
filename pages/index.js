@@ -50,11 +50,11 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <section className="text-gray-600 body-font">
+      <section className="py-11">
         <div className="max-w-[650px] mx-auto">
           {current === 1 && (
             <div className="mb-[60px]">
-              <h1 className="text-[32px] leading-[42px] font-lato capitalize text-[#2A2C2B] font-semibold mb-[10px]">
+              <h1 className="text-[32px] leading-[42px] font-lato capitalize text-[#2A2C2B] font-medium mb-[10px]">
                 Fill one simple form with four sections to see your funding
                 options.
               </h1>
