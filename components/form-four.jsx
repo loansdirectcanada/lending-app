@@ -9,8 +9,8 @@ const formFour = ({ setCurrent, formData, setFormData }) => {
   };
 
   return (
-    <div className=" bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md mb-10">
-      <div className="flex flex-wrap mb-6">
+    <div className=" bg-white border border-[#d4d6d5] rounded-[8px]">
+      <div className="max-w-[410px] mx-auto py-[40px]">
         <div className="w-full ">
           <section className="text-gray-600 body-font">
             <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
@@ -20,10 +20,10 @@ const formFour = ({ setCurrent, formData, setFormData }) => {
                 src="https://www.pngplay.com/wp-content/uploads/12/Congratulations-Gifs-PNG-Free-File-Download.gif"
               />
               <div className="text-center lg:w-2/3 w-full">
-                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+                <h1 className="text-[50px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
                   Congratulations Your Submission is successful
                 </h1>
-                <p className="mb-8 leading-relaxed">
+                <p className="mb-[15px] text-[12px] font-medium text-[#2A2C2B] font-lato">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                   malesuada lorem maximus mauris scelerisque, at rutrum nulla
                   fermentum.

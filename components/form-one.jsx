@@ -21,10 +21,10 @@ const formOne = ({ setCurrent, formData, setFormData }) => {
           </div>
           <div className="max-w-[410px] mx-auto py-[40px]">
             <div className="relative mb_Bottom">
-              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text[#2A2C2B] mb-[15px]">
+              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
                 How much do you need?
               </h5>
-              <div className={`relative rounded-[4px] h-[50px] border-animation ${show==="money_need" && 'is-focus'}`}   >
+              <div className={`relative rounded-[4px] h-[50px] border-animation ${show==="money_need" && 'is-focus'}`} >
                 <i className="fa-solid fa-dollar-sign absolute left-[10px] top-[50%] -translate-y-[50%] text-[10px] text-[#a8acaa] "></i>
                 <input
                   type="number"
@@ -39,7 +39,7 @@ const formOne = ({ setCurrent, formData, setFormData }) => {
               </div>
             </div>
             <div className="relative mb_Bottom">
-              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text[#2A2C2B] ">
+              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text-[#2A2C2B] ">
                 How long would you like the loan for?
               </h5>
               <p className="mb-[15px] text-[12px] font-medium text-[#2A2C2B] font-lato">The shorter the term, the less interest you'll pay.</p>
@@ -94,7 +94,7 @@ const formOne = ({ setCurrent, formData, setFormData }) => {
               </div>
             </div>
             <div className="relative mb_Bottom">
-              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text[#2A2C2B] mb-[15px]">
+              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
                 How soon would you like the loan?
               </h5>
 
@@ -128,7 +128,7 @@ const formOne = ({ setCurrent, formData, setFormData }) => {
               </div>
             </div>
             <div className="relative mb_Bottom">
-              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text[#2A2C2B] mb-[15px]">
+              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
                 Lets narrow it down, choose the main purpose of the loan.
               </h5>
 
@@ -307,7 +307,7 @@ const formOne = ({ setCurrent, formData, setFormData }) => {
               </div>
             </div>
             <div className="relative mb_Bottom">
-              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text[#2A2C2B] mb-[15px]">
+              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
                 And finally, please specify the reason in a few words.
               </h5>
               <div className={`relative rounded-[4px] h-[50px] border-animation ${show==="reason_description" && 'is-focus'}`}>

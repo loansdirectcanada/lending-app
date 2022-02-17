@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 
 const formOne = ({ setCurrent, formData, setFormData, backButton }) => {
   const handleChange = (e) => {
@@ -7,81 +7,91 @@ const formOne = ({ setCurrent, formData, setFormData, backButton }) => {
       [e.target.name]: e.target.value,
     });
   };
+  const [show, setShow] = useState("");
   return (
     <div>
-      <div className="container px-2 py-10 mx-auto flex p-10">
-        <div className=" bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
-          <div className="parent_wrap">
-            <i className="fa-solid fa-calendar-day col_icon"></i>
+      <div className="container">
+        <div className="bg-white border border-[#d4d6d5] rounded-[8px]">
+          <div className="flex px-[24px] py-[16px] border-b border-[#f2f2f2]">
+            <i className="fa-solid fa-calendar-day fa-solid fa-money-bill col_icon mr-3"></i>
             <div className="wrap_con">
-              <span className="up_font">Section Two</span>
-              <span className="down_font">Business details</span>
+              <span className="text-[10px] font-semibold text-[#7D8380] uppercase block font-lato mb-0">Section Two</span>
+              <span className="text-[14px] text-[#2A2C2B] font-semibold block font-lato">Business details</span>
             </div>
           </div>
-          <div className="mainWrap_con">
+          <div className="max-w-[410px] mx-auto py-[40px]">
             <div className="relative mb_Bottom">
-              <h5 htmlFor="text" className="field_title">
+              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
                 What best describes your industry?
               </h5>
 
-              <div className="field_con rounded border border-gray-300">
-                <i className="fa-solid fa-align-center col_icon_Doll "></i>
+              <div className={`relative rounded-[4px] h-[50px] border-animation ${show==="your_industry" && 'is-focus'}`}>
+                <i className="fa-solid fa-align-center absolute left-[10px] top-[50%] -translate-y-[50%] text-[10px] text-[#a8acaa]"></i>
                 <input
                   type="text"
                   id="text"
                   name="your_industry"
-                  className="w-full bg-white   focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full h-full px-[20px] focus:border-0 focus:outline-0 bg-transparent"
                   placeholder="e.g. Retail"
                   value={formData.your_industry}
                   onChange={handleChange}
+                  onFocus={(e) => setShow(e.target.name)}
+                  onBlur={(e) => setShow("")}
                 />
               </div>
             </div>
             <div className="relative mb_Bottom">
-              <h5 htmlFor="text" className="field_title">
+              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
                 What’s the name of your business?
               </h5>
+              <div className={`relative rounded-[4px] h-[50px] border-animation ${show==="business_name" && 'is-focus'}`}>
               <input
                 type="text"
                 id="text"
                 name="business_name"
-                className="w-full bg-white rounded border border-gray-300 mt-5 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full h-full px-[20px] focus:border-0 focus:outline-0 bg-transparent"
                 placeholder="Start typing the business name, entity name or ABN..."
                 value={formData.business_name}
                 onChange={handleChange}
+                onFocus={(e) => setShow(e.target.name)}
+                onBlur={(e) => setShow("")}
               />
+              </div>
+              
             </div>
             <div className="relative mb_Bottom">
-              <h5 htmlFor="text" className="field_title">
+              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text-[#2A2C2B]">
                 What’s the average monthly sales?
               </h5>
-              <p className="field_subtitle text-gray-600 text-xs">
+              <p className="mb-[15px] text-[12px] font-medium text-[#2A2C2B] font-lato">
                 Lenders need to know the average monthly sales, over the last 6
                 months.
               </p>
-              <div className="field_con rounded border border-gray-300">
-                <i className="fa-solid fa-dollar-sign col_icon_Doll "></i>
+              <div className={`relative rounded-[4px] h-[50px] border-animation ${show==="monthly_average_sales" && 'is-focus'}`}>
+                <i className="fa-solid fa-dollar-sign absolute left-[10px] top-[50%] -translate-y-[50%] text-[10px] text-[#a8acaa]"></i>
                 <input
                   type="number"
                   id="text"
                   name="monthly_average_sales"
-                  className="w-full bg-white   focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full h-full px-[20px] focus:border-0 focus:outline-0 bg-transparent"
                   value={formData.monthly_average_sales}
                   onChange={handleChange}
+                  onFocus={(e) => setShow(e.target.name)}
+                  onBlur={(e) => setShow("")}
                 />
               </div>
             </div>
             <div className="relative mb_Bottom">
-              <h5 htmlFor="text" className="field_title">
+              <h5 htmlFor="text" className="text-[20px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
                 Do you invoice customers?
               </h5>
               <div className="flex flex-wrap mt-4 align-middle">
                 <button
                   type="button"
-                  className={`py-2 px-8 ml-2 mt-2 text-xs font-medium  rounded-md border border-gray-400 ${
+                  className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                     formData.do_you_invoice === "yes"
-                      ? "bg-indigo-500 text-white"
-                      : "bg-white text-gray-500"
+                      ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                      : "bg-transparent text-[#7d8380]"
                   } `}
                   onClick={() =>
                     setFormData({ ...formData, do_you_invoice: "yes" })
@@ -91,10 +101,10 @@ const formOne = ({ setCurrent, formData, setFormData, backButton }) => {
                 </button>
                 <button
                   type="button"
-                  className={`py-2 px-8 ml-2 mt-2 text-xs font-medium  rounded-md border border-gray-400 ${
+                  className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                     formData.do_you_invoice === "no"
-                      ? "bg-indigo-500 text-white"
-                      : "bg-white text-gray-500"
+                      ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                      : "bg-transparent text-[#7d8380]"
                   } `}
                   onClick={() =>
                     setFormData({ ...formData, do_you_invoice: "no" })
@@ -106,7 +116,7 @@ const formOne = ({ setCurrent, formData, setFormData, backButton }) => {
             </div>
 
             <button
-              className="text-white bg-indigo-500 border-0 py-2 w-full px-6 focus:outline-none hover:bg-indigo-600 rounded text-md"
+              className="block w-full px-[10px] py-[12px] rounded-[4px] bg-[#304ff8] text-[#ffffff] text-[15px] font-semibold transition hover:text-[#ffffff] hover:bg-[#051a8f] cursor-pointer"
               disabled={
                 !formData.your_industry ||
                 !formData.business_name ||
