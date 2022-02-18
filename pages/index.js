@@ -5,7 +5,7 @@ import FormThree from "../components/form-three";
 import FormFour from "../components/form-four";
 import db from "../firebase";
 import { v4 as uuidv4 } from "uuid";
-
+import axios from "axios";
 import { useState } from "react";
 import Oneback from "../components/back/one-back";
 import TwoBack from "../components/back/two-back";
@@ -39,7 +39,13 @@ export default function Home() {
       })
       .then((res) => {
         console.log(res);
-        setCurrent(current + 1);
+        axios
+          .post(
+            `https://imperial-capital.herokuapp.com/email/${formData.email}/${formData.first_name}`
+          )
+          .then((res) => {
+            setCurrent(current + 1);
+          });
       });
   };
   const backButton = () => {
