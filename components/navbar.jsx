@@ -19,8 +19,8 @@ const Navbar = () => {
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg> */}
             <img
-              src="/7cdf6a39-328e-4fd2-8659-42c03f95bf0c.jpg"
-              className="w-11 h-11 text-white  bg-indigo-500 rounded-full"
+              src="/unnamed .jpg"
+              className="w-11 h-11 text-white  bg-indigo-500 rounded-ful0l"
             />
             <span className="ml-3 text-xl text-white">Loans Direct</span>
           </a>
