@@ -7,8 +7,8 @@ const TwoBack = ({ setCurrent, formData }) => {
         <div className="flex space-x-4 justify-between items-start mb-5">
           <h1 className="text-[24px] font-lato font-medium text-white mb-[15px]">
             <span className="text-[#304ff8]">{formData.your_industry} </span>{" "}
-            ,works in Carpentry{" "}
-            <span className="text-[#304ff8]"> {formData.business_name} </span>,
+            ,works in{" "}
+            <span className="text-[#304ff8]"> {formData.business_name}</span>,
             The past 6 months avg. monthly sales was $
             <span className="text-[#304ff8]">
               {formData.monthly_average_sales}

@@ -14,20 +14,20 @@ const formFour = ({ setCurrent, formData, setFormData }) => {
         <div className="w-full ">
           <section className="text-gray-600 body-font">
             <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-              <img
+              {/* <img
                 className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
                 alt="hero"
                 src="https://www.pngplay.com/wp-content/uploads/12/Congratulations-Gifs-PNG-Free-File-Download.gif"
-              />
+              /> */}
               <div className="text-center  w-full">
                 <h1 className="text-[24px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
                   Congratulations Your Submission is successful
                 </h1>
-                <p className="mb-[15px] text-[12px] font-medium text-[#2A2C2B] font-lato">
+                {/* <p className="mb-[15px] text-[12px] font-medium text-[#2A2C2B] font-lato">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                   malesuada lorem maximus mauris scelerisque, at rutrum nulla
                   fermentum.
-                </p>
+                </p> */}
               </div>
             </div>
           </section>

@@ -85,7 +85,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                   type="button"
                   className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px]	 ${
                     formData.time_duration === "month"
-                      ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                      ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                       : "bg-transparent text-[#7d8380]"
                   }`}
                   onClick={() => {
@@ -102,7 +102,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                   type="button"
                   className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                     formData.time_duration === "year"
-                      ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                      ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                       : "bg-transparent text-[#7d8380]"
                   } `}
                   onClick={() => {
@@ -188,7 +188,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                       formData.main_purpose === "Day-to-day Capital"
-                        ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
                     name="Day-to-day Capital"
@@ -202,7 +202,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                       formData.main_purpose === "Vehicles or Transport"
-                        ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
                     name="Vehicles or Transport"
@@ -216,7 +216,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                       formData.main_purpose === "Renovation"
-                        ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
                     name="Renovation"
@@ -230,7 +230,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                       formData.main_purpose === "Other"
-                        ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
                     name="Other"
@@ -244,7 +244,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                       formData.main_purpose === "Start a New Business"
-                        ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
                     name="Other"
@@ -258,7 +258,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                       formData.main_purpose === "Purchase Existing Business"
-                        ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
                     name="Purchase Existing Business"
@@ -272,7 +272,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                       formData.main_purpose === "Expansion"
-                        ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
                     name="Expansion"
@@ -286,7 +286,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                       formData.main_purpose === "New Fit-out"
-                        ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
                     name="New Fit-out"
@@ -300,7 +300,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                       formData.main_purpose === "Machinery or Equipment"
-                        ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
                     name="Machinery or Equipment"
@@ -315,7 +315,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                       formData.main_purpose ===
                       "Pay domestic or international suppliers"
-                        ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
                     name="Pay domestic or international suppliers"
@@ -329,7 +329,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                       formData.main_purpose === "Pay for goods or services"
-                        ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
                     name="Pay for goods or services"
@@ -343,7 +343,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                       formData.main_purpose === "Development & Construction"
-                        ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
                     name="Development & Construction"
@@ -382,7 +382,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
               </div>
             </div>
             <button
-              className="block w-full px-[10px] py-[12px] rounded-[4px] bg-[#304ff8] text-[#ffffff] text-[15px] font-semibold transition hover:text-[#ffffff] hover:bg-[#051a8f] cursor-pointer"
+              className="block w-full px-[10px] py-[12px] rounded-[4px] bg-[#ec3b37] text-[#ffffff] text-[15px] font-semibold transition hover:text-[#ffffff] hover:bg-[#051a8f] cursor-pointer"
               disabled={
                 !formData.money_need ||
                 !formData.time_duration ||

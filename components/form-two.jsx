@@ -117,7 +117,7 @@ const FormOne = ({ setCurrent, formData, setFormData, backButton }) => {
                   type="button"
                   className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                     formData.do_you_invoice === "yes"
-                      ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                      ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                       : "bg-transparent text-[#7d8380]"
                   } `}
                   onClick={() =>
@@ -130,7 +130,7 @@ const FormOne = ({ setCurrent, formData, setFormData, backButton }) => {
                   type="button"
                   className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
                     formData.do_you_invoice === "no"
-                      ? "bg-[#304ff8] text-[#ffffff] border-[#304ff8]"
+                      ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                       : "bg-transparent text-[#7d8380]"
                   } `}
                   onClick={() =>
@@ -143,7 +143,7 @@ const FormOne = ({ setCurrent, formData, setFormData, backButton }) => {
             </div>
 
             <button
-              className="block w-full px-[10px] py-[12px] rounded-[4px] bg-[#304ff8] text-[#ffffff] text-[15px] font-semibold transition hover:text-[#ffffff] hover:bg-[#051a8f] cursor-pointer"
+              className="block w-full px-[10px] py-[12px] rounded-[4px] bg-[#ec3b37] text-[#ffffff] text-[15px] font-semibold transition hover:text-[#ffffff] hover:bg-[#ff6c6a] cursor-pointer"
               disabled={
                 !formData.your_industry ||
                 !formData.business_name ||

@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="container mx-auto flex flex-wrap p-5  flex-col md:flex-row items-center ">
         <Link href="/">
           <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <svg
+            {/* <svg
               xmlns="https://image.similarpng.com/very-thumbnail/2020/07/Flat-logo-google-play-icon-Vector-PNG.png"
               fill="none"
               stroke="currentColor"
@@ -17,7 +17,11 @@ const Navbar = () => {
               viewBox="0 0 24 24"
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-            </svg>
+            </svg> */}
+            <img
+              src="/7cdf6a39-328e-4fd2-8659-42c03f95bf0c.jpg"
+              className="w-11 h-11 text-white  bg-indigo-500 rounded-full"
+            />
             <span className="ml-3 text-xl text-white">Loans Direct</span>
           </a>
         </Link>

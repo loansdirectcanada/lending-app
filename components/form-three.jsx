@@ -79,14 +79,14 @@ const FormThree = ({
                   id="otp"
                   placeholder="Enter OTP"
                   name="otp"
-                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-white rounded border border-gray-300 focus:border-[#ec3b37] focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   value={otp}
                   onChange={(e) => setotp(e.target.value)}
                 />
               </div>
               {!hideBtnOtp ? (
                 <button
-                  className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-5"
+                  className="text-white bg-[#ec3b37] border-0 py-2 px-6 focus:outline-none hover:bg-red-500 rounded text-lg mt-5"
                   onClick={async () => {
                     await verifyOtp(otp);
                   }}
@@ -95,7 +95,7 @@ const FormThree = ({
                 </button>
               ) : (
                 <button
-                  className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-5"
+                  className="text-white bg-[#ec3b37] border-0 py-2 px-6 focus:outline-none hover:bg-red-500 rounded text-lg mt-5"
                   type="button"
                   disabled={true}
                 >
@@ -237,7 +237,7 @@ const FormThree = ({
               </div>
 
               <button
-                className="block w-full px-[10px] py-[12px] rounded-[4px] bg-[#304ff8] text-[#ffffff] text-[15px] font-semibold transition hover:text-[#ffffff] hover:bg-[#051a8f] cursor-pointer"
+                className="block w-full px-[10px] py-[12px] rounded-[4px] bg-[#ec3b37] text-[#ffffff] text-[15px] font-semibold transition hover:text-[#ffffff] hover:bg-[#ff6c6a] cursor-pointer"
                 onClick={async () => {
                   // setCurrent(2);
                   // const response = await handleSubmit(formData);
