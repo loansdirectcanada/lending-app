@@ -95,16 +95,16 @@ const FormThree = ({
                 </button>
               ) : (
                 <button
-                  class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-5"
+                  className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-5"
                   type="button"
                   disabled={true}
                 >
                   <span
-                    class="spinner-border spinner-border-sm"
+                    className="spinner-border spinner-border-sm"
                     role="status"
                     aria-hidden="true"
                   ></span>
-                  <span class="ml-5">Processing...</span>
+                  <span className="ml-5">Processing...</span>
                 </button>
               )}
             </div>
