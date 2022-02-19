@@ -5,7 +5,7 @@ const TwoBack = ({ setCurrent, formData }) => {
     <div className="container px-2 py-0 mx-auto flex p-0">
       <div className="  rounded-lg  flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 ">
         <div className="flex space-x-4 justify-between items-start mb-5">
-          <h1 className="text-[24px] font-lato font-medium text-[#2A2C2B] mb-[15px]">
+          <h1 className="text-[24px] font-lato font-medium text-white mb-[15px]">
             <span className="text-[#304ff8]">{formData.your_industry} </span>{" "}
             ,works in Carpentry{" "}
             <span className="text-[#304ff8]"> {formData.business_name} </span>,
@@ -17,7 +17,7 @@ const TwoBack = ({ setCurrent, formData }) => {
           </h1>
           <button
             type="button"
-            className={`inline-block w-full px-[16px] w-[75px] py-[8px] rounded-[4px] border border-[#7d8380] text-[#535755] text-[15px] font-medium leading-none transition hover:text-[#ffffff] hover:bg-[#051a8f] hover:border-[#051a8f] cursor-pointer  `}
+            className={`inline-block w-full px-[16px] w-[75px] py-[8px] rounded-[4px] border border-[#fff] text-[#fff] text-[15px] font-medium leading-none transition hover:text-[#ffffff] hover:bg-red hover:border-[#051a8f] cursor-pointer  `}
             onClick={() => {
               setCurrent(2);
             }}

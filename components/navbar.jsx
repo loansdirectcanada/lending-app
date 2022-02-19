@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 const Navbar = () => {
   return (
-    <header className="py-0.5 shadow-md bg-white">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <header className="py-0.5 shadow-md bg-[#ec3b37]">
+      <div className="container mx-auto flex flex-wrap p-2.8 pt-2 flex-col md:flex-row items-center ">
         <Link href="/">
           <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <svg
@@ -18,7 +18,7 @@ const Navbar = () => {
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
-            <span className="ml-3 text-xl">Loans Direct</span>
+            <span className="ml-3 text-xl text-white">Loans Direct</span>
           </a>
         </Link>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center"></nav>

@@ -10,8 +10,8 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
   const [show, setShow] = useState("");
   return (
     <div>
-      <div className="container">
-        <div className="bg-white border border-[#d4d6d5] rounded-[8px]">
+      <div className="container md-w-100">
+        <div className="bg-white border border-[#d4d6d5] rounded-[8px] p-5">
           <div className="flex px-[24px] py-[16px] border-b border-[#f2f2f2]">
             <i className="fa-solid fa-money-bill col_icon mr-3"></i>
             <div className="wrap_con">

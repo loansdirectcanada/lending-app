@@ -9,11 +9,13 @@ const FormThree = ({
   setFormData,
   handleSubmit,
   backButton,
+  hideBtnOtp,
+  setHideBtnOtp,
 }) => {
   const [final, setfinal] = useState("");
   const [otp, setotp] = useState("");
   const [otpState, setotpState] = useState(false);
-  const [hideBtnOtp, setHideBtnOtp] = useState(false);
+
   const [otpError, setotpError] = useState({
     error: false,
     message: "Something went wrong please try again or enter a new number",
@@ -63,7 +65,7 @@ const FormThree = ({
     <div>
       <div className="container ">
         {otpState ? (
-          <div className=" bg-white border border-[#d4d6d5] rounded-[8px]">
+          <div className=" bg-white border border-[#d4d6d5] rounded-[8px] p-5">
             <div className="max-w-[410px] mx-auto py-[40px]">
               <div className="w-full ">
                 <label
@@ -82,7 +84,7 @@ const FormThree = ({
                   onChange={(e) => setotp(e.target.value)}
                 />
               </div>
-              {!hideBtnOtp && (
+              {!hideBtnOtp ? (
                 <button
                   className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-5"
                   onClick={async () => {
@@ -91,11 +93,24 @@ const FormThree = ({
                 >
                   Verify OTP
                 </button>
+              ) : (
+                <button
+                  class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-5"
+                  type="button"
+                  disabled={true}
+                >
+                  <span
+                    class="spinner-border spinner-border-sm"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="ml-5">Processing...</span>
+                </button>
               )}
             </div>
           </div>
         ) : (
-          <div className=" bg-white border border-[#d4d6d5] rounded-[8px]">
+          <div className=" bg-white border border-[#d4d6d5] rounded-[8px] p-5">
             <div className="flex px-[24px] py-[16px] border-b border-[#f2f2f2]">
               <i className="fa-solid fa-calendar-day col_icon mr-3"></i>
               <div className="wrap_con">

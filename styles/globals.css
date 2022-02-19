@@ -1,13 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Lato', sans-serif;
-  background-color: #f2f2f2;
+  font-family: "Lato", sans-serif;
+  background-color: #ec3b37;
 }
 
 a {
@@ -144,7 +144,7 @@ a {
 .border-animation::before {
   box-sizing: border-box;
   transform: translateX(100%);
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -157,7 +157,7 @@ a {
 .border-animation::after {
   box-sizing: border-box;
   transform: translateX(-100%);
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -183,12 +183,12 @@ a {
 .border-animation.is-focus {
   border: none;
 }
-.border-animation.is-focus .label-text{
- top: 8px !important;
- color: #304ff8;
+.border-animation.is-focus .label-text {
+  top: 8px !important;
+  color: #304ff8;
 }
 
-.radiobtn .checkimage  {
+.radiobtn .checkimage {
   display: none;
 }
 .radiobtn input:checked ~ .uncheckimage {

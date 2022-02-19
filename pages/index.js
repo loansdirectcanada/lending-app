@@ -13,6 +13,7 @@ import ThreeBack from "../components/back/three-back";
 export default function Home() {
   const [current, setCurrent] = useState(1);
   const [summery, setSummery] = useState(2);
+  const [hideBtnOtp, setHideBtnOtp] = useState(false);
   const [formData, setFormData] = useState({
     id: uuidv4(),
     money_need: "",
@@ -45,6 +46,7 @@ export default function Home() {
           )
           .then((res) => {
             setCurrent(current + 1);
+            setHideBtnOtp(false);
           });
       });
   };
@@ -56,15 +58,15 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <section className="py-11">
+      <section className="py-11 m-10">
         <div className="max-w-[650px] mx-auto">
           {current === 1 && (
             <div className="mb-[60px]">
-              <h1 className="text-[32px] leading-[42px] font-lato capitalize text-[#2A2C2B] font-medium mb-[10px]">
+              <h1 className="text-[32px] leading-[42px] font-lato capitalize text-[#fff] font-medium mb-[10px]">
                 Fill one simple form with four sections to see your funding
                 options.
               </h1>
-              <p className="text-[16px] leading-[24px] text-[#2A2C2B] font-lato font-normal">
+              <p className="text-[16px] leading-[24px] text-[#fff] font-lato font-normal">
                 This will not impact your credit score.
               </p>
             </div>
@@ -101,6 +103,8 @@ export default function Home() {
               formData={formData}
               handleSubmit={handleSubmit}
               backButton={backButton}
+              hideBtnOtp={hideBtnOtp}
+              setHideBtnOtp={setHideBtnOtp}
             />
           ) : (
             <FormFour

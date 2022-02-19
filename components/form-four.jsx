@@ -9,7 +9,7 @@ const formFour = ({ setCurrent, formData, setFormData }) => {
   };
 
   return (
-    <div className=" bg-white border border-[#d4d6d5] rounded-[8px]">
+    <div className=" bg-white border border-[#d4d6d5] rounded-[8px] p-5">
       <div className="max-w-[410px] mx-auto py-[40px]">
         <div className="w-full ">
           <section className="text-gray-600 body-font">
