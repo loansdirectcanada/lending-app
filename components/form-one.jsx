@@ -77,13 +77,13 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                   />
                   {!formData.time_duration_in_number && (
                     <label className="label-text absolute left-[10px] top-[50%] -translate-y-[50%] text-[10px] text-[#a8acaa] transition-all pointer-events-none">
-                      Type a number
+                      Type a number{formData.time_duration}
                     </label>
                   )}
                 </div>
                 <button
                   type="button"
-                  className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px]	 ${
+                  className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none  m-[4px]	 ${
                     formData.time_duration === "month"
                       ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                       : "bg-transparent text-[#7d8380]"
@@ -100,7 +100,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                 </button>
                 <button
                   type="button"
-                  className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
+                  className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none  m-[4px] ${
                     formData.time_duration === "year"
                       ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                       : "bg-transparent text-[#7d8380]"
@@ -186,7 +186,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                 <div>
                   <button
                     type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
+                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none  m-[4px] ${
                       formData.main_purpose === "Business Expansion"
                         ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
@@ -200,7 +200,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                   </button>
                   <button
                     type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
+                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none  m-[4px] ${
                       formData.main_purpose ===
                       "Machinery or Equipment retooling"
                         ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
@@ -215,7 +215,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                   </button>
                   <button
                     type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
+                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none  m-[4px] ${
                       formData.main_purpose ===
                       "Pay domestic or international suppliers"
                         ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
@@ -231,7 +231,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
 
                   <button
                     type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
+                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none  m-[4px] ${
                       formData.main_purpose ===
                       "Property development & Construction "
                         ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
@@ -246,7 +246,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                   </button>
                   <button
                     type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
+                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none  m-[4px] ${
                       formData.main_purpose === "Insurance and risks"
                         ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
@@ -260,7 +260,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                   </button>
                   <button
                     type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
+                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none  m-[4px] ${
                       formData.main_purpose === "Cargo and logistics shipping"
                         ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
@@ -274,7 +274,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                   </button>
                   <button
                     type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
+                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none  m-[4px] ${
                       formData.main_purpose === "Investment and Finance"
                         ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
@@ -288,7 +288,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                   </button>
                   <button
                     type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
+                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none  m-[4px] ${
                       formData.main_purpose === "Other"
                         ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
