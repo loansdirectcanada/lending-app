@@ -129,7 +129,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                 <label className="radiobtn flex flex-col-reverse text-center items-center mr-10">
                   <input
                     type="radio"
-                    className="form-radio h-7 w-7  transition duration-150 ease-in-out "
+                    className="form-radio h-7 w-7 accent-red-500  transition duration-150 ease-in-out "
                     name="loan_rush"
                     value="ASAP"
                     checked={formData.loan_rush === "ASAP"}
@@ -152,7 +152,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                 <label className="radiobtn flex flex-col-reverse text-center items-center">
                   <input
                     type="radio"
-                    className="form-radio h-7 w-7  transition duration-150 ease-in-out "
+                    className="form-radio h-7 w-7 accent-red-500  transition duration-150 ease-in-out "
                     name="loan_rush"
                     value="not in rush"
                     checked={formData.loan_rush === "not in rush"}
@@ -187,128 +187,31 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                   <button
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
-                      formData.main_purpose === "Day-to-day Capital"
+                      formData.main_purpose === "Business Expansion"
                         ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
-                    name="Day-to-day Capital"
+                    name="Business Expansion"
                     onClick={() => {
-                      handle_purpose("Day-to-day Capital");
+                      handle_purpose("Business Expansion");
                     }}
                   >
-                    Day-to-day Capital
+                    Business Expansion
                   </button>
                   <button
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
-                      formData.main_purpose === "Vehicles or Transport"
+                      formData.main_purpose ===
+                      "Machinery or Equipment retooling"
                         ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
-                    name="Vehicles or Transport"
+                    name="Machinery or Equipment retooling"
                     onClick={() => {
-                      handle_purpose("Vehicles or Transport");
+                      handle_purpose("Machinery or Equipment retooling");
                     }}
                   >
-                    Vehicles or Transport
-                  </button>
-                  <button
-                    type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
-                      formData.main_purpose === "Renovation"
-                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
-                        : "bg-transparent text-[#7d8380]"
-                    } `}
-                    name="Renovation"
-                    onClick={() => {
-                      handle_purpose("Renovation");
-                    }}
-                  >
-                    Renovation
-                  </button>
-                  <button
-                    type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
-                      formData.main_purpose === "Other"
-                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
-                        : "bg-transparent text-[#7d8380]"
-                    } `}
-                    name="Other"
-                    onClick={() => {
-                      handle_purpose("Other");
-                    }}
-                  >
-                    Other
-                  </button>
-                  <button
-                    type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
-                      formData.main_purpose === "Start a New Business"
-                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
-                        : "bg-transparent text-[#7d8380]"
-                    } `}
-                    name="Other"
-                    onClick={() => {
-                      handle_purpose("Start a New Business");
-                    }}
-                  >
-                    Start a New Business
-                  </button>
-                  <button
-                    type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
-                      formData.main_purpose === "Purchase Existing Business"
-                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
-                        : "bg-transparent text-[#7d8380]"
-                    } `}
-                    name="Purchase Existing Business"
-                    onClick={() => {
-                      handle_purpose("Purchase Existing Business");
-                    }}
-                  >
-                    Purchase Existing Business
-                  </button>
-                  <button
-                    type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
-                      formData.main_purpose === "Expansion"
-                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
-                        : "bg-transparent text-[#7d8380]"
-                    } `}
-                    name="Expansion"
-                    onClick={() => {
-                      handle_purpose("Expansion");
-                    }}
-                  >
-                    Expansion
-                  </button>
-                  <button
-                    type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
-                      formData.main_purpose === "New Fit-out"
-                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
-                        : "bg-transparent text-[#7d8380]"
-                    } `}
-                    name="New Fit-out"
-                    onClick={() => {
-                      handle_purpose("New Fit-out");
-                    }}
-                  >
-                    New Fit-out
-                  </button>
-                  <button
-                    type="button"
-                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
-                      formData.main_purpose === "Machinery or Equipment"
-                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
-                        : "bg-transparent text-[#7d8380]"
-                    } `}
-                    name="Machinery or Equipment"
-                    onClick={() => {
-                      handle_purpose("Machinery or Equipment");
-                    }}
-                  >
-                    Machinery or Equipment
+                    Machinery or Equipment retooling
                   </button>
                   <button
                     type="button"
@@ -325,33 +228,77 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                   >
                     Pay domestic or international suppliers
                   </button>
+
                   <button
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
-                      formData.main_purpose === "Pay for goods or services"
+                      formData.main_purpose ===
+                      "Property development & Construction "
                         ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
-                    name="Pay for goods or services"
+                    name="Other"
                     onClick={() => {
-                      handle_purpose("Pay for goods or services");
+                      handle_purpose("Property development & Construction ");
                     }}
                   >
-                    Property
+                    Property development & Construction
                   </button>
                   <button
                     type="button"
                     className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
-                      formData.main_purpose === "Development & Construction"
+                      formData.main_purpose === "Insurance and risks"
                         ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
                         : "bg-transparent text-[#7d8380]"
                     } `}
-                    name="Development & Construction"
+                    name="Insurance and risks"
                     onClick={() => {
-                      handle_purpose("Development & Construction");
+                      handle_purpose("Insurance and risks");
                     }}
                   >
-                    Development & Construction
+                    Insurance and risks
+                  </button>
+                  <button
+                    type="button"
+                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
+                      formData.main_purpose === "Cargo and logistics shipping"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
+                        : "bg-transparent text-[#7d8380]"
+                    } `}
+                    name="Cargo and logistics shipping"
+                    onClick={() => {
+                      handle_purpose("Cargo and logistics shipping");
+                    }}
+                  >
+                    Cargo and logistics shippin
+                  </button>
+                  <button
+                    type="button"
+                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
+                      formData.main_purpose === "Investment and Finance"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
+                        : "bg-transparent text-[#7d8380]"
+                    } `}
+                    name="Investment and Finance"
+                    onClick={() => {
+                      handle_purpose("Investment and Finance");
+                    }}
+                  >
+                    Investment and Finance
+                  </button>
+                  <button
+                    type="button"
+                    className={`text-[12px] px-[16px] py-[8px] rounded-[4px] min-w-[80px] border border-[#7d8380] leading-none text-[#7d8380] m-[4px] ${
+                      formData.main_purpose === "Other"
+                        ? "bg-[#ec3b37] text-[#ffffff] border-[#ec3b37]"
+                        : "bg-transparent text-[#7d8380]"
+                    } `}
+                    name="Other"
+                    onClick={() => {
+                      handle_purpose("Other");
+                    }}
+                  >
+                    Other
                   </button>
                 </div>
               </div>
@@ -382,7 +329,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
               </div>
             </div>
             <button
-              className="block w-full px-[10px] py-[12px] rounded-[4px] bg-[#ec3b37] text-[#ffffff] text-[15px] font-semibold transition hover:text-[#ffffff] hover:bg-[#051a8f] cursor-pointer"
+              className="block w-full px-[10px] py-[12px] rounded-[4px] bg-[#ec3b37] text-[#ffffff] text-[15px] font-semibold transition hover:text-[#ffffff] hover:bg-[#ff6c6a] cursor-pointer"
               disabled={
                 !formData.money_need ||
                 !formData.time_duration ||
