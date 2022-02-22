@@ -6,11 +6,11 @@ const TwoBack = ({ setCurrent, formData }) => {
       <div className="  rounded-lg  flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 ">
         <div className="flex space-x-4 justify-between items-start mb-5">
           <h1 className="text-[24px] font-lato font-medium text-white mb-[15px]">
-            <span className="text-[#304ff8]">{formData.your_industry} </span>{" "}
+            <span className="text-[#2e2e2e]">{formData.your_industry} </span>{" "}
             ,works in{" "}
-            <span className="text-[#304ff8]"> {formData.business_name}</span>,
+            <span className="text-[#2e2e2e]"> {formData.business_name}</span>,
             The past 6 months avg. monthly sales was $
-            <span className="text-[#304ff8]">
+            <span className="text-[#2e2e2e]">
               {formData.monthly_average_sales}
             </span>
             .

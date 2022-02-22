@@ -7,11 +7,11 @@ const Oneback = ({ setCurrent, formData }) => {
         <div className="flex space-x-4 justify-between items-start mb-5">
           <h1 className="text-[24px] font-lato font-medium text-white mb-[15px]">
             I’m looking for{" "}
-            <span className="text-[#304ff8]">${formData.money_need}</span>, Loan
+            <span className="text-[#2e2e2e]">${formData.money_need}</span>, Loan
             duration
-            <span className="text-[#304ff8]"> {formData.time_duration}</span>,
+            <span className="text-[#2e2e2e]"> {formData.time_duration}</span>,
             and to be paid over
-            <span className="text-[#304ff8]">
+            <span className="text-[#2e2e2e]">
               {" "}
               {formData.time_duration_in_number} {formData.time_duration}
             </span>
