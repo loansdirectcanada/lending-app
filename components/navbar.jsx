@@ -19,10 +19,9 @@ const Navbar = () => {
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg> */}
             <img
-              src="/unnamed .jpg"
-              className="w-11 h-11 text-white  bg-indigo-500 rounded-ful0l"
+              src="/01.png"
+              className="h-11 text-white  w-50 rounded-ful0ll"
             />
-            <span className="ml-3 text-xl text-white">Loans Direct</span>
           </a>
         </Link>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center"></nav>

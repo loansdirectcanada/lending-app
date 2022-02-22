@@ -793,7 +793,7 @@ export default function Session() {
             <div className="w-1/3">
               <div className="sticky top-0 p-5 b-[#ffffff] border border-[#E3E3DC] bg-[#ffffff]">
                 <h3 className="text-[15px] text-[#999999] capitalize mb-[10px]">Contents</h3>
-                <Scrollspy items={ ['Organization', 'Contact', 'Founders', 'Category', 'Progress','Idea','Formation','Others', 'Legal','Curious'] } className="mb-[15px] list-decimal pl-[20px]" currentClassName="is-current">
+                <Scrollspy items={ ['Organization', 'Contact', 'Founders', 'Category', 'Progress','Idea','Formation', 'Legal', 'Others', 'Curious'] } className="mb-[15px] list-decimal pl-[20px]" currentClassName="is-current">
                   <li><a className="block rounded-[5px] px-[5px] py-[4px] text-[#555] text-[15px] font-semibold capitalize hover:bg-[#a3cfee]" href="#Organization">Organization</a></li>
                   <li><a className="block rounded-[5px] px-[5px] py-[4px] text-[#555] text-[15px] font-semibold capitalize hover:bg-[#a3cfee]" href="#Contact">Contact</a></li>
                   <li><a className="block rounded-[5px] px-[5px] py-[4px] text-[#555] text-[15px] font-semibold capitalize hover:bg-[#a3cfee]" href="#Founders">Founders</a></li>

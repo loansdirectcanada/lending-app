@@ -1,6 +1,8 @@
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useState } from "react";
+import dynamic from "next/dynamic";
+const ReactCodeInput = dynamic(import("react-code-input"));
 
 import { auth, firebase } from "../firebase";
 const FormThree = ({
@@ -64,17 +66,18 @@ const FormThree = ({
   return (
     <div>
       <div className="container ">
-        {otpState ? (
+        {!otpState ? (
           <div className=" bg-white border border-[#d4d6d5] rounded-[8px] p-5">
             <div className="max-w-[410px] mx-auto py-[40px]">
               <div className="w-full ">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block tracking-wide text-gray-700 text-lg font-bold mb-2"
                   htmlFor="grid-first-name"
                 >
-                  OTP
+                  Please enter the verification code sent to
+                  <span className="text-[#ec3b37]"> {formData.phone}</span>
                 </label>
-                <input
+                {/* <input
                   type="text"
                   id="otp"
                   placeholder="Enter OTP"
@@ -82,6 +85,24 @@ const FormThree = ({
                   className="w-full bg-white rounded border border-gray-300 focus:border-[#ec3b37] focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   value={otp}
                   onChange={(e) => setotp(e.target.value)}
+                />
+                 */}
+                <ReactCodeInput
+                  type="number"
+                  fields={6}
+                  onChange={(e) => setotp(e)}
+                  inputStyle={{
+                    width: "50px",
+
+                    height: "60px",
+                    border: "1px solid #d4d6d5",
+                    borderRadius: "8px",
+                    outline: "none",
+                    padding: "0px 10px",
+                    fontSize: "20px",
+                    textAlign: "center",
+                    margin: "0px 5px",
+                  }}
                 />
               </div>
               {!hideBtnOtp ? (

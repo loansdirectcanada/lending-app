@@ -21,13 +21,15 @@ const formFour = ({ setCurrent, formData, setFormData }) => {
               /> */}
               <div className="text-center  w-full">
                 <h1 className="text-[24px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
-                  Congratulations Your Submission is successful
+                  Congratulations!!
                 </h1>
-                {/* <p className="mb-[15px] text-[12px] font-medium text-[#2A2C2B] font-lato">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  malesuada lorem maximus mauris scelerisque, at rutrum nulla
-                  fermentum.
-                </p> */}
+                <p className="mb-[15px] text-[12px] font-medium text-[#2A2C2B] font-lato">
+                  Your submission is successful. We&apos;ll analyze the
+                  information and get back to you as soon as possible. In case
+                  your application gets approved at this first step, you&apos;ll
+                  be matched with the lender, and forwarded to the partner
+                  auditor for determination of your eligibility.
+                </p>
               </div>
             </div>
           </section>

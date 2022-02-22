@@ -8,7 +8,8 @@ import firebase from "firebase";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyD17i_gz3kO3F-kUIxEuD3IE0hOSlgveMM",
-  authDomain: "loanapp-6263b.firebaseapp.com",
+  // authDomain: "loanapp-6263b.firebaseapp.com",
+  databaseURL: "lending-app.vercel.app",
   projectId: "loanapp-6263b",
   storageBucket: "loanapp-6263b.appspot.com",
   messagingSenderId: "1630579191",
