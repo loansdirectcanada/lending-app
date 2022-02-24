@@ -209,5 +209,11 @@ input[type="number"] {
 }
 .is-current a {
   color: #ffffff;
-  background-color: #ff611a ;
+  background-color: #ff611a;
+}
+.text-overflow-hided {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 240px;
 }
