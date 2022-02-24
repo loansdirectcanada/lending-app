@@ -193,9 +193,9 @@ export default function Session() {
       <div className="session-area py-11">
         <div className="container md:max-w-[1170px] mx-auto">
           <div className="py-[25px] border-b border-[#DEDEDE] mb-[35px]">
-            {/* <h2 className="text-[32px] font-medium text-[#ffffff] capitalize">
-              Non-profit Application Form
-            </h2> */}
+            <h2 className="text-[32px] font-medium text-[#ffffff] capitalize">
+              Company Application Form
+            </h2>
             <p className="text-[14px] text-[#f9f9f9]">Summer 2022</p>
           </div>
           <div className="flex gap-8">
