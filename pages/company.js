@@ -87,9 +87,9 @@ export default function Session() {
     final
       .confirm(otp)
       .then((result) => {
-        handleSubmit(formData);
-        console.log(result);
-        setstep(3);
+        handleSubmit(formData).then(() => {
+          console.log("success");
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -177,6 +177,7 @@ export default function Session() {
           )
           .then((res) => {
             console.log(res);
+            setstep(3);
           });
       });
     console.log(myFormData);
@@ -1286,8 +1287,8 @@ export default function Session() {
                       htmlFor="encourage"
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
                     >
-                      What convinced you to apply to Y Combinator? Did someone
-                      encourage you to apply?
+                      What convinced you to apply? Did someone encourage you to
+                      apply?
                     </label>
                     <div
                       className={`relative rounded-[4px] h-[100px] border-animation ${
@@ -1312,7 +1313,7 @@ export default function Session() {
                       htmlFor="Combinator"
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
                     >
-                      How did you hear about Y Combinator?
+                      How did you hear about us?
                     </label>
                     <div
                       className={`relative rounded-[4px] h-[100px] border-animation ${
@@ -1516,7 +1517,7 @@ export default function Session() {
                   </li>
                   <li className="mb-[5px] last:mb-0">
                     <a className="text-[#268bd2]" href="#">
-                      About Y Combinator
+                      About Us
                     </a>
                   </li>
                 </ul>
