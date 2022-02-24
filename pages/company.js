@@ -52,8 +52,8 @@ export default function Session() {
     Combinator: "",
     financial_projection_file: null,
     exclusive_summary_file: null,
-    investor_slides_file: null,
-    company_logo_file: null,
+    // investor_slides_file: null,
+    // company_logo_file: null,
   });
   const uploadFile = async (file) => {
     const data = new FormData();
@@ -103,7 +103,7 @@ export default function Session() {
       });
   };
   const handleSubmit = async (formData, e) => {
-    let company_logo_file_url = await uploadFile(formData.company_logo_file);
+    // let company_logo_file_url = await uploadFile(formData.company_logo_file);
 
     let financial_projection_file_url = await uploadFile(
       formData.financial_projection_file
@@ -113,16 +113,10 @@ export default function Session() {
       formData.exclusive_summary_file
     );
 
-    let investor_slides_file_url = await uploadFile(
-      formData.investor_slides_file
-    );
-    console.log(
-      company_logo_file_url,
-      company_logo_file_url,
-      exclusive_summary_file_url,
-      investor_slides_file_url,
-      "company_logo_file_url"
-    );
+    // let investor_slides_file_url = await uploadFile(
+    //   formData.investor_slides_file
+    // );
+
     let myFormData = {
       id: formData.id,
       company_name: formData.company_name,
@@ -160,8 +154,8 @@ export default function Session() {
       Combinator: formData.Combinator,
       financial_projection_file: financial_projection_file_url,
       exclusive_summary_file: exclusive_summary_file_url,
-      investor_slides_file: investor_slides_file_url,
-      company_logo_file: company_logo_file_url,
+      // investor_slides_file: investor_slides_file_url,
+      // company_logo_file: company_logo_file_url,
     };
 
     console.log(myFormData);
@@ -199,9 +193,9 @@ export default function Session() {
       <div className="session-area py-11">
         <div className="container md:max-w-[1170px] mx-auto">
           <div className="py-[25px] border-b border-[#DEDEDE] mb-[35px]">
-            <h2 className="text-[32px] font-medium text-[#ffffff] capitalize">
+            {/* <h2 className="text-[32px] font-medium text-[#ffffff] capitalize">
               Non-profit Application Form
-            </h2>
+            </h2> */}
             <p className="text-[14px] text-[#f9f9f9]">Summer 2022</p>
           </div>
           <div className="flex gap-8">
@@ -1202,7 +1196,7 @@ export default function Session() {
                       </label>
                     </div>
                   </div>
-                  <div className="relative mb-[20px] last:mb-0">
+                  {/* <div className="relative mb-[20px] last:mb-0">
                     <label
                       htmlFor="considered"
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
@@ -1237,8 +1231,8 @@ export default function Session() {
                         </span>
                       </label>
                     </div>
-                  </div>
-                  <div className="relative mb-[20px] last:mb-0">
+                  </div> */}
+                  {/* <div className="relative mb-[20px] last:mb-0">
                     <label
                       htmlFor="considered"
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
@@ -1273,7 +1267,7 @@ export default function Session() {
                         </span>
                       </label>
                     </div>
-                  </div>
+                  </div> */}
                 </section>
                 <section
                   id="Curious"
