@@ -66,7 +66,7 @@ const FormThree = ({
   return (
     <div>
       <div className="container ">
-        {!otpState ? (
+        {otpState ? (
           <div className=" bg-white border border-[#d4d6d5] rounded-[8px] p-5">
             <div className="max-w-[410px] mx-auto py-[40px]">
               <div className="w-full ">

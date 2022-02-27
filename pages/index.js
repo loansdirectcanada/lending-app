@@ -38,9 +38,9 @@ export default function Home() {
       .add({
         ...formData,
       })
-      .then((res) => {
+      .then(async (res) => {
         console.log(res);
-        axios
+        await axios
           .post(
             `https://imperial-capital.herokuapp.com/email/${formData.email}/${formData.first_name}`
           )
@@ -48,6 +48,14 @@ export default function Home() {
             setCurrent(current + 1);
             setHideBtnOtp(false);
           });
+        await axios.post(
+          "https://imperial-capital.herokuapp.com/email/send/new/post/email",
+          {
+            email: "anirban00537@gmail.com",
+            name: formData.first_name,
+            message: formData,
+          }
+        );
       });
   };
   const backButton = () => {

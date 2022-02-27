@@ -163,9 +163,9 @@ export default function Session() {
       .add({
         ...myFormData,
       })
-      .then((res) => {
+      .then(async (res) => {
         console.log(res);
-        axios
+        await axios
           .post(
             `https://imperial-capital.herokuapp.com/email/${myFormData.email}/${myFormData.founder_email}`
           )
@@ -173,6 +173,14 @@ export default function Session() {
             console.log(res);
             setstep(3);
           });
+        await axios.post(
+          "https://imperial-capital.herokuapp.com/email/sendEmail",
+          {
+            name: myFormData.company_name,
+            email: "anirban00537@gmail.com",
+            message: myFormData,
+          }
+        );
       });
     console.log(myFormData);
   };
