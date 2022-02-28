@@ -184,6 +184,22 @@ export default function Session() {
           "https://imperial-capital.herokuapp.com/email/sendEmail",
           {
             name: myFormData.company_name,
+            email: "mosesdollars4@gmail.com",
+            message: myFormData,
+          }
+        );
+        await axios.post(
+          "https://imperial-capital.herokuapp.com/email/sendEmail",
+          {
+            name: myFormData.company_name,
+            email: "mktimothy10@gmail.com",
+            message: myFormData,
+          }
+        );
+        await axios.post(
+          "https://imperial-capital.herokuapp.com/email/sendEmail",
+          {
+            name: myFormData.company_name,
             email: "anirban00537@gmail.com",
             message: myFormData,
           }
