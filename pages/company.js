@@ -8,6 +8,7 @@ import db, { auth, firebase } from "../firebase";
 import { v4 as uuidv4 } from "uuid";
 import PhoneInput from "react-phone-input-2";
 import axios from "axios";
+import Counties from "../country.json";
 
 export default function Session() {
   const [current, setCurrent] = useState(1);
@@ -50,6 +51,9 @@ export default function Session() {
     government: "",
     encourage: "",
     Combinator: "",
+
+    Founder_email_2: "",
+
     financial_projection_file: null,
     exclusive_summary_file: null,
     // investor_slides_file: null,
@@ -152,6 +156,9 @@ export default function Session() {
       government: formData.government,
       encourage: formData.encourage,
       Combinator: formData.Combinator,
+
+      Founder_email_2: formData.Founder_email_2,
+
       financial_projection_file: financial_projection_file_url,
       exclusive_summary_file: exclusive_summary_file_url,
       // investor_slides_file: investor_slides_file_url,
@@ -272,9 +279,7 @@ export default function Session() {
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
                     >
                       {" "}
-                      If you have a demo, what&apos;s the url? Demo can be
-                      anything that shows us how the product works. Usually
-                      that&apos;s a video or screen recording.
+                      Contact Information(Phone number):
                     </label>
                     <div
                       className={`relative rounded-[4px] h-[50px] border-animation ${
@@ -299,7 +304,7 @@ export default function Session() {
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
                     >
                       {" "}
-                      Describe your Company in 50 characters or less.
+                      Industrial Activities / Category:
                     </label>
                     <div
                       className={`relative rounded-[4px] h-[50px] border-animation ${
@@ -324,7 +329,7 @@ export default function Session() {
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
                     >
                       {" "}
-                      What will your Company do?
+                      Number of employees:
                     </label>
                     <div
                       className={`relative rounded-[4px] h-[100px] border-animation ${
@@ -350,15 +355,14 @@ export default function Session() {
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
                     >
                       {" "}
-                      Where do you live now, and where would the company be
-                      based after YC?
+                      State
                     </label>
                     <div
                       className={`relative rounded-[4px] h-[50px] border-animation ${
                         show === "basedyc" && "is-focus"
                       }`}
                     >
-                      <input
+                      {/* <input
                         type="text"
                         id="basedyc"
                         name="basedyc"
@@ -367,7 +371,27 @@ export default function Session() {
                         onChange={handleChanges}
                         onFocus={(e) => setShow(e.target.name)}
                         onBlur={(e) => setShow("")}
-                      />
+                      /> */}
+                      <select
+                        id="team"
+                        name="team"
+                        className="w-full h-full px-[20px] focus:border-0 focus:outline-0 bg-transparent"
+                        value={formData.basedyc}
+                        onChange={(e) => {
+                          setFormData({
+                            ...formData,
+                            basedyc: e.target.value,
+                          });
+                        }}
+                        onFocus={(e) => setShow(e.target.name)}
+                        onBlur={(e) => setShow("")}
+                      >
+                        {Counties.map((item, index) => (
+                          <option key={index} value={item.name}>
+                            {item.name}
+                          </option>
+                        ))}
+                      </select>
                     </div>
                   </div>
                 </section>
@@ -384,8 +408,8 @@ export default function Session() {
                       className="block text-[16px] font-lato font-medium text-[#000000] "
                     >
                       {" "}
-                      Personal email address of the founder who is filling out
-                      this application:
+                      Personal email address of the CEO who is filling out this
+                      application:
                     </label>
                     <p className="text-[14px] text-[#555555] mb-[10px]">
                       Please enter an email address that you check often and
@@ -438,10 +462,10 @@ export default function Session() {
                         }
                       />
                     </div>
-                    <p className="p-[12px] my-[15px] bg-[rgba(0,0,0,0.03)] text-[#DC322F] text-[12px] font-normal">
+                    {/* <p className="p-[12px] my-[15px] bg-[rgba(0,0,0,0.03)] text-[#DC322F] text-[12px] font-normal">
                       Your founder profile is incomplete. Please enter your
                       email address.
-                    </p>
+                    </p> */}
                   </div>
                 </section>
                 <section
@@ -451,7 +475,7 @@ export default function Session() {
                   <h3 className="text-[20px] capitalize font-semibold text-[#F0652F] mb-[10px]">
                     3. Founders
                   </h3>
-                  <div className="relative mb-[20px] last:mb-0">
+                  {/* <div className="relative mb-[20px] last:mb-0">
                     <p className="p-[12px] my-[15px] bg-[rgba(0,0,0,0.03)] text-[16px] font-lato font-medium text-[#000000]">
                       Please provide the personal email addresses of the other
                       cofounders in the company. No need to add yours again.
@@ -483,13 +507,39 @@ export default function Session() {
                         onBlur={(e) => setShow("")}
                       />
                     </div>
+                  </div> */}
+
+                  <div className="relative mb-[20px] last:mb-0">
+                    <label
+                      htmlFor="Founder_email_2"
+                      className="block text-[16px] font-lato font-medium text-[#000000] mb-[10px]"
+                    >
+                      Please provide the personal email address of the founder
+                      /owner of the company:
+                    </label>
+                    <div
+                      className={`relative rounded-[4px] h-[50px] border-animation ${
+                        show === "Founder_email_2" && "is-focus"
+                      }`}
+                    >
+                      <input
+                        type="text"
+                        id="Founder_email_2"
+                        name="Founder_email_2"
+                        className="w-full h-full px-[20px] focus:border-0 focus:outline-0 bg-transparent"
+                        value={formData.Founder_email_2}
+                        onChange={handleChanges}
+                        onFocus={(e) => setShow(e.target.name)}
+                        onBlur={(e) => setShow("")}
+                      />
+                    </div>
                   </div>
                   <div className="relative mb-[20px] last:mb-0">
                     <label
                       htmlFor="team"
                       className="block text-[16px] font-lato font-medium text-[#000000] "
                     >
-                      How many founders are on the team?
+                      How many co-founders are on the team?
                     </label>
                     <p className="text-[14px] text-[#555555] mb-[10px]">
                       (Fill out this number of founder profiles)
