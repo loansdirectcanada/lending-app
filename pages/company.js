@@ -590,14 +590,14 @@ export default function Session() {
                   className="border-b border-[#DEDEDE] py-[35px]"
                 >
                   <h3 className="text-[20px] capitalize font-semibold text-[#F0652F] mb-[10px]">
-                    4. Category
+                    4. Market share and a competitive advantage.
                   </h3>
                   <div className="relative mb-[20px] last:mb-0">
                     <label
                       htmlFor="category"
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[10px] "
                     >
-                      Which category best applies to your company?
+                      What will make it hard for others to rise above you?
                     </label>
                     <div
                       className={`relative rounded-[4px] h-[50px] border-animation ${
@@ -623,7 +623,7 @@ export default function Session() {
                       htmlFor="located"
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[10px] "
                     >
-                      Where will most of your initial users be located?
+                      What makes you a game-changer?
                     </label>
                     <div
                       className={`relative rounded-[4px] h-[50px] border-animation ${
@@ -650,7 +650,7 @@ export default function Session() {
                   className="border-b border-[#DEDEDE] py-[35px]"
                 >
                   <h3 className="text-[20px] capitalize font-semibold text-[#F0652F] mb-[10px]">
-                    5. Progress
+                    5. Cash flow and a financial plan
                   </h3>
                   <div className="relative mb-[20px] last:mb-0">
                     <label
@@ -658,7 +658,7 @@ export default function Session() {
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
                     >
                       {" "}
-                      How far along are you?
+                      How much money comes into your business in a year?
                     </label>
                     <div
                       className={`relative rounded-[4px] h-[100px] border-animation ${
@@ -684,8 +684,7 @@ export default function Session() {
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
                     >
                       {" "}
-                      How long have each of you been working on this? How much
-                      of that has been full-time? Please explain.
+                      How much money goes out of the business in a year?
                     </label>
                     <div
                       className={`relative rounded-[4px] h-[100px] border-animation ${
@@ -710,7 +709,8 @@ export default function Session() {
                       htmlFor="product"
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[10px] "
                     >
-                      Are people using your product?
+                      How long will it take you to make profit or to recoup the
+                      investment?
                     </label>
                     <div
                       className={`relative rounded-[4px] h-[50px] border-animation ${
@@ -731,7 +731,7 @@ export default function Session() {
                       </select>
                     </div>
                   </div>
-                  <div className="relative mb-[20px] last:mb-0">
+                  {/* <div className="relative mb-[20px] last:mb-0">
                     <label
                       htmlFor="revenue"
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[10px] "
@@ -756,8 +756,8 @@ export default function Session() {
                         <option value="no">no</option>
                       </select>
                     </div>
-                  </div>
-                  <div className="relative mb-[20px] last:mb-0">
+                  </div> */}
+                  {/* <div className="relative mb-[20px] last:mb-0">
                     <label
                       htmlFor="previous"
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
@@ -785,8 +785,8 @@ export default function Session() {
                         cols="50"
                       ></textarea>
                     </div>
-                  </div>
-                  <div className="relative mb-[20px] last:mb-0">
+                  </div> */}
+                  {/* <div className="relative mb-[20px] last:mb-0">
                     <label
                       htmlFor="accelerator"
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
@@ -813,7 +813,7 @@ export default function Session() {
                         cols="50"
                       ></textarea>
                     </div>
-                  </div>
+                  </div> */}
                 </section>
                 <section
                   id="Idea"
@@ -1074,7 +1074,7 @@ export default function Session() {
                       />
                     </div>
                   </div>
-                  <div className="relative mb-[20px] last:mb-0">
+                  {/* <div className="relative mb-[20px] last:mb-0">
                     <label
                       htmlFor="revenue"
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[10px] "
@@ -1099,7 +1099,7 @@ export default function Session() {
                         <option value="no">no</option>
                       </select>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="relative mb-[20px] last:mb-0">
                     <label
                       htmlFor="formation"
@@ -1139,9 +1139,8 @@ export default function Session() {
                       htmlFor="nonFounder"
                       className="block text-[16px] font-lato font-medium text-[#000000] mb-[5px]"
                     >
-                      Who writes code, or does other technical work on your
-                      product? Was any of it done by a non-founder? Please
-                      explain.
+                      Is your business registered by government? If yes, state
+                      your business and tax registration numbers.
                     </label>
                     <div
                       className={`relative rounded-[4px] h-[100px] border-animation ${
@@ -1403,10 +1402,8 @@ export default function Session() {
                   </div>
                   <div id="recaptcha-container"></div>
                   <p className="text-[16px] landscape-[26px] text-[#000000] mb-[15px]">
-                    Please ensure that this application is complete and all
-                    founders have filled out their profiles before submitting
-                    your application for review. The answer to this question
-                    must match the number of profiles filled.
+                    Please ensure that this application is complete before
+                    submitting it for review
                   </p>
                   <p className="text-[16px] landscape-[26px] text-[#000000] mb-[15px]">
                     Once you submit your application you will not be able to
@@ -1414,10 +1411,7 @@ export default function Session() {
                     deadline has passed or not.
                   </p>
                   <p className="text-[16px] landscape-[26px] font-medium text-[#dc322f] mb-[30px]">
-                    Applications must have at least one founder to be
-                    submitted.Founder intro must be a valid YouTube video URL.
-                    Number of founders stated does not match number of profiles
-                    filled.
+                    Application must have atleast one founder to be submitted.
                   </p>
 
                   <button
@@ -1517,7 +1511,7 @@ export default function Session() {
                       className="block rounded-[5px] px-[5px] py-[4px] text-[#555] text-[15px] font-semibold capitalize hover:bg-[#a3cfee]"
                       href="#Category"
                     >
-                      Category
+                      Market share and a competitive advantage.
                     </a>
                   </li>
                   <li>
@@ -1525,7 +1519,7 @@ export default function Session() {
                       className="block rounded-[5px] px-[5px] py-[4px] text-[#555] text-[15px] font-semibold capitalize hover:bg-[#a3cfee]"
                       href="#Founders"
                     >
-                      Progress
+                      Cash flow and a financial plan
                     </a>
                   </li>
                   <li>
