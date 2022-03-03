@@ -28,8 +28,8 @@ export default function Session() {
     phone: "",
     videoGuidelines: "",
     team: "1",
-    category: "no",
-    located: "no",
+    category: "",
+    located: "",
     along: "",
     working: "",
     product: "yes",
@@ -604,7 +604,7 @@ export default function Session() {
                         show === "category" && "is-focus"
                       }`}
                     >
-                      <select
+                      {/* <select
                         id="category"
                         name="category"
                         className="w-full h-full px-[20px] focus:border-0 focus:outline-0 bg-transparent"
@@ -615,7 +615,17 @@ export default function Session() {
                       >
                         <option value="no">no</option>
                         <option value="yes">yes</option>
-                      </select>
+                      </select> */}
+                      <input
+                        type="text"
+                        id="category"
+                        name="category"
+                        className="w-full h-full px-[20px] focus:border-0 focus:outline-0 bg-transparent"
+                        value={formData.category}
+                        onChange={handleChanges}
+                        onFocus={(e) => setShow(e.target.name)}
+                        onBlur={(e) => setShow("")}
+                      />
                     </div>
                   </div>
                   <div className="relative mb-[20px] last:mb-0">
@@ -630,7 +640,7 @@ export default function Session() {
                         show === "located" && "is-focus"
                       }`}
                     >
-                      <select
+                      {/* <select
                         id="located"
                         name="located"
                         className="w-full h-full px-[20px] focus:border-0 focus:outline-0 bg-transparent"
@@ -641,7 +651,17 @@ export default function Session() {
                       >
                         <option value="no">no</option>
                         <option value="yes">yes</option>
-                      </select>
+                      </select> */}
+                      <input
+                        type="text"
+                        id="located"
+                        name="located"
+                        className="w-full h-full px-[20px] focus:border-0 focus:outline-0 bg-transparent"
+                        value={formData.located}
+                        onChange={handleChanges}
+                        onFocus={(e) => setShow(e.target.name)}
+                        onBlur={(e) => setShow("")}
+                      />
                     </div>
                   </div>
                 </section>
