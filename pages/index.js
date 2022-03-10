@@ -7,12 +7,14 @@ import db from "../firebase";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import Oneback from "../components/back/one-back";
 import TwoBack from "../components/back/two-back";
 import ThreeBack from "../components/back/three-back";
 export default function Home() {
   const [current, setCurrent] = useState(1);
   const [summery, setSummery] = useState(2);
+  const route = useRouter();
   const [hideBtnOtp, setHideBtnOtp] = useState(false);
   const [formData, setFormData] = useState({
     id: uuidv4(),
@@ -56,6 +58,9 @@ export default function Home() {
             message: formData,
           }
         );
+        setTimeout(() => {
+          route.reload();
+        }, 10000);
       });
   };
   const backButton = () => {
