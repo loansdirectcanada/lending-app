@@ -9,9 +9,11 @@ import { v4 as uuidv4 } from "uuid";
 import PhoneInput from "react-phone-input-2";
 import axios from "axios";
 import Counties from "../country.json";
+import { useRouter } from "next/router";
 
 export default function Session() {
   const [current, setCurrent] = useState(1);
+  const route = useRouter();
   const [step, setstep] = useState(1);
   const [otp, setotp] = useState("");
   const [final, setfinal] = useState("");
@@ -107,8 +109,6 @@ export default function Session() {
       });
   };
   const handleSubmit = async (formData, e) => {
-    // let company_logo_file_url = await uploadFile(formData.company_logo_file);
-
     let financial_projection_file_url = await uploadFile(
       formData.financial_projection_file
     );
@@ -116,10 +116,6 @@ export default function Session() {
     let exclusive_summary_file_url = await uploadFile(
       formData.exclusive_summary_file
     );
-
-    // let investor_slides_file_url = await uploadFile(
-    //   formData.investor_slides_file
-    // );
 
     let myFormData = {
       id: formData.id,
@@ -172,14 +168,7 @@ export default function Session() {
       })
       .then(async (res) => {
         console.log(res);
-        await axios
-          .post(
-            `https://imperial-capital.herokuapp.com/email/${myFormData.email}/${myFormData.founder_email}`
-          )
-          .then((res) => {
-            console.log(res);
-            setstep(3);
-          });
+
         await axios.post(
           "https://imperial-capital.herokuapp.com/email/sendEmail",
           {
@@ -204,6 +193,18 @@ export default function Session() {
             message: myFormData,
           }
         );
+        await axios
+          .put(
+            `https://imperial-capital.herokuapp.com/email/send/client-email/${myFormData.founder_email}/${myFormData.company_name}`
+          )
+          .then((res) => {
+            console.log(res);
+            setstep(3);
+          });
+
+        setTimeout(() => {
+          route.reload();
+        }, 10000);
       });
     console.log(myFormData);
   };
