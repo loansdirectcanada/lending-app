@@ -185,17 +185,10 @@ export default function Session() {
             message: myFormData,
           }
         );
-        await axios.post(
-          "https://imperial-capital.herokuapp.com/email/sendEmail",
-          {
-            name: myFormData.company_name,
-            email: "anirban00537@gmail.com",
-            message: myFormData,
-          }
-        );
+
         await axios
-          .put(
-            `https://imperial-capital.herokuapp.com/email/send/client-email/${myFormData.founder_email}/${myFormData.company_name}`
+          .post(
+            `https://imperial-capital.herokuapp.com/email/${myFormData.founder_email}/${myFormData.company_name}`
           )
           .then((res) => {
             console.log(res);

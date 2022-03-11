@@ -42,22 +42,31 @@ export default function Home() {
       })
       .then(async (res) => {
         console.log(res);
+
+        // await axios.post(
+        //   "https://imperial-capital.herokuapp.com/email/send/new/post/email",
+        //   {
+        //     email: "mosesdollars4@gmail.com",
+        //     name: formData.first_name,
+        //     message: formData,
+        //   }
+        // );
+        // await axios.post(
+        //   "https://imperial-capital.herokuapp.com/email/send/new/post/email",
+        //   {
+        //     email: "mktimothy10@gmail.com",
+        //     name: formData.first_name,
+        //     message: formData,
+        //   }
+        // );
         await axios
-          .post(
-            `https://imperial-capital.herokuapp.com/email/${formData.email}/${formData.first_name}`
+          .put(
+            `https://imperial-capital.herokuapp.com/email/send/client-email/${formData.email}/${formData.first_name}`
           )
           .then((res) => {
             setCurrent(current + 1);
             setHideBtnOtp(false);
           });
-        await axios.post(
-          "https://imperial-capital.herokuapp.com/email/send/new/post/email",
-          {
-            email: "anirban00537@gmail.com",
-            name: formData.first_name,
-            message: formData,
-          }
-        );
         setTimeout(() => {
           route.reload();
         }, 10000);
