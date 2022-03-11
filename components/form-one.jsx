@@ -77,7 +77,7 @@ const FormOne = ({ setCurrent, formData, setFormData }) => {
                   />
                   {!formData.time_duration_in_number && (
                     <label className="label-text absolute left-[10px] top-[50%] -translate-y-[50%] text-[10px] text-[#a8acaa] transition-all pointer-events-none">
-                      Click Month / Year
+                      Enter Month / Year
                     </label>
                   )}
                 </div>
