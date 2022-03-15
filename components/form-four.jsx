@@ -27,8 +27,8 @@ const formFour = ({ setCurrent, formData, setFormData }) => {
                   Your submission is successful. We&apos;ll analyze the
                   information and get back to you as soon as possible. In case
                   your application gets approved at this first step, you&apos;ll
-                  be matched with the lender, and forwarded to the partner
-                  auditor for determination of your eligibility.
+                  be matched with one of our vetted investors, and forwarded to
+                  the partner auditor for determination of your eligibility.
                 </p>
               </div>
             </div>
