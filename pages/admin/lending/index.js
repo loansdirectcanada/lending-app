@@ -57,7 +57,7 @@ const Lending = () => {
             </Thead>
             <Tbody>
               {Allloans.map((loan) => (
-                <Tr>
+                <Tr key={loan.id}>
                   <Td>{loan?.first_name}</Td>
                   <Td> {loan?.phone}</Td>
                   <Td>{loan?.email}</Td>

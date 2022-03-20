@@ -257,6 +257,7 @@ function DrawerExample({ business }) {
                           <a
                             href={business?.financial_projection_file}
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             File
                           </a>
@@ -268,6 +269,7 @@ function DrawerExample({ business }) {
                           <a
                             href={business?.exclusive_summary_file}
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             File
                           </a>

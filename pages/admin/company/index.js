@@ -59,7 +59,7 @@ const Lending = () => {
             </Thead>
             <Tbody>
               {AllCompanies.map((Company) => (
-                <Tr>
+                <Tr key={Company.id}>
                   <Td>{Company?.company_name}</Td>
                   <Td> {Company?.productwork}</Td>
                   <Td>{Company?.Describe}</Td>
