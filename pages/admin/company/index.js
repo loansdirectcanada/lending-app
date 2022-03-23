@@ -56,7 +56,7 @@ const Lending = () => {
         mt={10}
         mb={10}
         fontWeight="bold"
-        color={useColorModeValue("gray.500", "gray.300")}
+        color={"gray.500"}
         fontSize="4xl"
       >
         {" "}
@@ -99,11 +99,7 @@ const Lending = () => {
                       deleteBusinessById(Company.id);
                     }}
                   >
-                    <Button
-                      variantColor="red"
-                      color={useColorModeValue("gray.500", "gray.300")}
-                      fontSize="sm"
-                    >
+                    <Button variantColor="red" color={"gray.500"} fontSize="sm">
                       Delete
                     </Button>
                   </Td>
