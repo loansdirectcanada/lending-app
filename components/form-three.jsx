@@ -4,7 +4,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 const ReactCodeInput = dynamic(import("react-code-input"));
 
-import { auth, firebase } from "../firebase";
+import db, { auth, firebase } from "../firebase";
 const FormThree = ({
   setCurrent,
   formData,
@@ -30,17 +30,38 @@ const FormThree = ({
     });
   };
   const phoneVerification = () => {
-    setHideBtnOtp(false);
-    let recapcha = new firebase.auth.RecaptchaVerifier("recaptcha-container");
-    let phoneNumber = "+" + formData.phone;
-    firebase
-      .auth()
-      .signInWithPhoneNumber(phoneNumber, recapcha)
-      .then((confirmationResult) => {
-        console.log(confirmationResult);
-        setfinal(confirmationResult);
-        setotpState(true);
+    db.collection("loans_applications_verified_phone")
+      .where("phone", "==", formData.phone)
+      .get()
+      .then((snapshot) => {
+        if (!snapshot.empty) {
+          setotpError({
+            error: true,
+            message: "This number is already registered",
+          });
+          setFormData({
+            ...formData,
+            phone: "",
+          });
+          setHideBtnOtp(true);
+          return;
+        } else {
+          let recapcha = new firebase.auth.RecaptchaVerifier(
+            "recaptcha-container"
+          );
+
+          let phoneNumber = "+" + formData.phone;
+          firebase
+            .auth()
+            .signInWithPhoneNumber(phoneNumber, recapcha)
+            .then((confirmationResult) => {
+              console.log(confirmationResult);
+              setfinal(confirmationResult);
+              setotpState(true);
+            });
+        }
       });
+    setHideBtnOtp(false);
   };
 
   const verifyOtp = async (otp) => {
@@ -49,7 +70,13 @@ const FormThree = ({
       .confirm(otp)
       .then((result) => {
         handleSubmit(formData);
-        console.log(result);
+        db.collection("loans_applications_verified_phone")
+          .add({
+            phone: formData.phone,
+          })
+          .then(() => {
+            console.log("success");
+          });
       })
       .catch((error) => {
         console.log(error);

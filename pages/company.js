@@ -12,6 +12,10 @@ import Counties from "../country.json";
 import { useRouter } from "next/router";
 
 export default function Session() {
+  const [error, setError] = useState({
+    status: false,
+    message: "",
+  });
   const [current, setCurrent] = useState(1);
   const route = useRouter();
   const [step, setstep] = useState(1);
@@ -95,6 +99,11 @@ export default function Session() {
       .then((result) => {
         handleSubmit(formData).then(() => {
           console.log("success");
+          db.collection("company_loans_applications_verified_phone")
+            .add({
+              phone: formData.phone,
+            })
+            .then(() => {});
         });
       })
       .catch((error) => {
@@ -448,28 +457,45 @@ export default function Session() {
                       className="block text-[16px] font-lato font-medium text-[#000000] "
                     >
                       {" "}
-                      Phone number:
+                      Phone number:{error.status.toString()}
                     </label>
+
                     <p className="text-[14px] text-[#555555] mb-[10px]">
                       International numbers will be called with WhatsApp.
                     </p>
+
                     <div className={`relative rounded-[4px] h-[50px] `}>
-                      {/* <input
-                        type="text"
-                        id="phone"
-                        name="phone"
-                        className="w-full h-full px-[20px] focus:border-0 focus:outline-0 bg-transparent"
-                        value={formData.phone}
-                        onChange={handleChanges}
-                        onFocus={(e) => setShow(e.target.name)}
-                        onBlur={(e) => setShow("")}
-                      /> */}
+                      {error.status === true ? (
+                        <p className="text-[14px] text-[#e23a3a] mb-[10px]">
+                          {error.message}
+                        </p>
+                      ) : null}
                       <PhoneInput
                         country={"us"}
                         value={formData.phone}
-                        onChange={(phone) =>
-                          setFormData({ ...formData, phone })
-                        }
+                        onChange={(phone) => {
+                          setFormData({ ...formData, phone });
+
+                          db.collection(
+                            "company_loans_applications_verified_phone"
+                          )
+                            .where("phone", "==", phone)
+                            .get()
+                            .then((snapshot) => {
+                              if (!snapshot.empty) {
+                                setFormData({ ...formData, phone });
+                                setError({
+                                  status: true,
+                                  message: "Phone number already exists",
+                                });
+                              } else {
+                                setError({
+                                  status: false,
+                                  message: "",
+                                });
+                              }
+                            });
+                        }}
                       />
                     </div>
                     {/* <p className="p-[12px] my-[15px] bg-[rgba(0,0,0,0.03)] text-[#DC322F] text-[12px] font-normal">
@@ -1465,6 +1491,7 @@ export default function Session() {
                     //   !formData.encourage ||
                     //   !formData.Combinator
                     // }
+                    disabled={error.status}
                     onClick={async (e) => {
                       e.preventDefault();
                       await phoneVerification(e);
