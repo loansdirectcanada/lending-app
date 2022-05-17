@@ -1,6 +1,6 @@
 import React from "react";
 
-const formFour = ({ setCurrent, formData, setFormData }) => {
+const formFour = ({ setCurrent, formData, setFormData, bool }) => {
   const handleChanges = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -23,13 +23,25 @@ const formFour = ({ setCurrent, formData, setFormData }) => {
                 <h1 className="text-[24px] font-lato font-semibold text-[#2A2C2B] mb-[15px]">
                   Congratulations!!
                 </h1>
-                <p className="mb-[15px] text-[12px] font-medium text-[#2A2C2B] font-lato">
-                  Your submission is successful. We&apos;ll analyze the
-                  information and get back to you as soon as possible. In case
-                  your application gets approved at this first step, you&apos;ll
-                  be matched with one of our vetted investors, and forwarded to
-                  the partner auditor for determination of your eligibility.
-                </p>
+                {bool ? (
+                  <p className="mb-[15px] text-[12px] font-medium text-[#2A2C2B] font-lato">
+                    Your submission is successful. We&apos;llanalyze the
+                    information and get back to you as soon as possible. In case
+                    your application gets approved at this first step,
+                    you&apos;ll be matched with one of our vetted lenders, and
+                    forwarded to the partner auditor for determination of your
+                    eligibility.
+                  </p>
+                ) : (
+                  <p className="mb-[15px] text-[12px] font-medium text-[#2A2C2B] font-lato">
+                    Your submission is successful. We&apos;ll analyze the
+                    information and get back to you as soon as possible. In case
+                    your application gets approved at this first step,
+                    you&apos;ll be matched with one of our vetted investors, and
+                    forwarded to the partner auditor for determination of your
+                    eligibility.
+                  </p>
+                )}
               </div>
             </div>
           </section>
