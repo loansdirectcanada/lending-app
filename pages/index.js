@@ -135,6 +135,7 @@ export default function Home() {
               formData={formData}
               handleSubmit={handleSubmit}
               backButton={backButton}
+              bool={true}
             />
           )}
         </div>
